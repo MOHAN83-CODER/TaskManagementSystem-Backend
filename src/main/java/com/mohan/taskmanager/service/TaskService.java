@@ -24,9 +24,18 @@ public class TaskService {
 
     // Add a new task
     public Task saveTask(Task task) {
-        return taskRepository.save(task);
-    }
 
+    System.out.println("========== ADD TASK ==========");
+    System.out.println("Title      : " + task.getTitle());
+    System.out.println("Description: " + task.getDescription());
+    System.out.println("Status     : " + task.getStatus());
+    System.out.println("Priority   : " + task.getPriority());
+    System.out.println("Category   : " + task.getCategory());
+    System.out.println("Due Date   : " + task.getDueDate());
+    System.out.println("User ID    : " + task.getUserId());
+
+    return taskRepository.save(task);
+}
     // Update an existing task
     public Task updateTask(Long id, Task updatedTask) {
 
